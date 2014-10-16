@@ -4,6 +4,7 @@ requires 'perl', '5.008001';
 requires 'YAML::XS';
 requires 'JSON::XS';
 requires 'HTTP::Parser::XS';
+requires 'Cookie::Baker::XS';
 
 # dependency manager
 requires 'Carton';
@@ -20,9 +21,10 @@ requires 'Exporter::Constants';
 requires 'AnyEvent';
 requires 'AnyEvent::HTTP';
 
-# parallel
+# unix system call
 requires 'Parallel::Async';
 requires 'Parallel::Prefork';
+requires 'Sys::SigAction';
 
 # CLI tools
 requires 'App::cpanminus';
@@ -30,13 +32,18 @@ requires 'App::cpanoutdated';
 requires 'App::scan_prereqs_cpanfile';
 requires 'App::watcher';
 requires 'App::envfile';
-requires 'ph';
+requires 'App::ph';
 
 # authorizing tools
 requires 'cpanfile'; # for doc
 requires 'Module::CPANfile';
 requires 'Minilla';
 requires 'App::PAUSE::Comaint';
+requires 'Version::Next';
+requires 'CPAN::Uploader';
+requires 'Test::CPAN::Meta';
+requires 'Test::PAUSE::Permissions';
+requires 'Test::Pod';
 
 # DNS
 requires 'Net::DNS::Lite';
@@ -136,4 +143,4 @@ requires 'Test::Memcached';
 requires 'Harriet';
 requires 'Spellunker';
 requires 'Spellunker::Perl';
-requires 'forkprove';
+requires 'App::ForkProve';
